@@ -41,13 +41,12 @@ public class NumberBaseball {
                     }
                 }
             }
-            System.out.println("정답 난수: "+successNuber);
             System.out.println(count + "번째 시도 : " + fullNumber);
             System.out.println(ballCount + "B" + strikeCount + "S");
             count++;
 
             if (strikeCount == 3){
-                System.out.println((count-1)+"번만에 맞히셨습니다.");
+                System.out.println((count-2)+"번만에 맞히셨습니다.");
                 System.out.println("게임을 종료합니다.");
                 break;
             }
