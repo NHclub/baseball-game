@@ -9,10 +9,9 @@ public class NumberBaseball {
         Scanner sc = new Scanner(System.in);
         Set<Integer> successNuber = new LinkedHashSet<>();
 
-        int maxNum = 9;
+        int maxNum = 10;
         int count = 1;
-        int ballCount = 0;
-        int strikeCount = 0;
+
 
         
         //중복 불가, 순서 보장 난수 3개 정답 번호 생성
@@ -29,9 +28,11 @@ public class NumberBaseball {
             String strFull = Integer.toString(fullNumber);
             int[] num = new int[3];
             for(int i = 0; i <3; i++){
-                num[i] = Character.getNumericValue(strFull.charAt(i));
+                num[i] = Character.getNumericValue(fullNumber.charAt(i));
             }
-            for (int i = 0; i<3; i++){
+            int ballCount = 0;
+            int strikeCount = 0;
+            for (int i = 0; i<3; i++){  //난수 468 입력값153
                 if (successNuberAL.contains(num[i])){
                     if (successNuberAL.indexOf(num[i]) == i){
                         strikeCount += 1;
