@@ -13,7 +13,7 @@ public class NumberBaseball {
         int count = 1;
 
 
-        
+
         //중복 불가, 순서 보장 난수 3개 정답 번호 생성
         while (successNuber.size()<3) {
             successNuber.add(rd.nextInt(maxNum));
@@ -24,8 +24,7 @@ public class NumberBaseball {
         System.out.println("컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!");
 
         while (true) {
-            int fullNumber = sc.nextInt();
-            String strFull = Integer.toString(fullNumber);
+            String fullNumber = sc.nextLine();
             int[] num = new int[3];
             for(int i = 0; i <3; i++){
                 num[i] = Character.getNumericValue(fullNumber.charAt(i));
@@ -49,6 +48,7 @@ public class NumberBaseball {
                 System.out.println((count-2)+"번만에 맞히셨습니다.");
                 System.out.println("게임을 종료합니다.");
                 break;
+                //종료
             }
         }
     }
